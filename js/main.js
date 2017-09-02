@@ -57,6 +57,15 @@ $(document).ready(function() {
     });
 });
 
+// preload function
+$(window).load(preLoader);
+"use strict";
+function preLoader() {
+    setTimeout(function() {
+        $('#preload').delay(1).fadeOut(1);
+    });
+};
+
 // niceScroll
 $(document).ready(function() {
     "use strict";
