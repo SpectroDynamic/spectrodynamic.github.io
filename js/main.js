@@ -56,6 +56,11 @@ $(document).ready(function () {
 		display: 'table'
 	});
 	$('[data-toggle="tooltip"]').tooltip();
+	var year = $('#year');
+	var date = new Date();
+	var currentYear = date.getFullYear();
+	if(currentYear < 1900) currentYear = currentYear + 1900;
+	year.html(currentYear);
 });
 
 // preload function
@@ -93,15 +98,6 @@ $("body").getNiceScroll().resize();
 		return this; // for chaining...
 	}
 })(jQuery);
-
-function scrollToTop(ob){
-	if ($(window).width() < 960) {
-		$(ob).offset().top + 'px'
-	}
-	else {
-		$(ob).offset().top - 220 + 'px'
-	}
-}
 
 $(document).keyup(function (e) {
 	if (e.keyCode === 27)
