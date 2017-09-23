@@ -88,11 +88,20 @@ $("body").getNiceScroll().resize();
 (function ($) {
 	$.fn.goTo = function () {
 		$('html, body').animate({
-			scrollTop: $(this).offset().top - 220 + 'px'
-		}, 'fast');
+			scrollTop: $(window).width() < 960 ? $(this).offset().top - 220 + 'px' : $(this).offset().top - 220 + 'px' 
+		}, 'swing');
 		return this; // for chaining...
 	}
 })(jQuery);
+
+function scrollToTop(ob){
+	if ($(window).width() < 960) {
+		$(ob).offset().top + 'px'
+	}
+	else {
+		$(ob).offset().top - 220 + 'px'
+	}
+}
 
 $(document).keyup(function (e) {
 	if (e.keyCode === 27)
