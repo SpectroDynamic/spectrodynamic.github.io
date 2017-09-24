@@ -977,6 +977,11 @@ a:hover {  text-decoration: underline }
 .avili:hover{
   color:white;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+}
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:

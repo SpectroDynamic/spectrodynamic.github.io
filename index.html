@@ -88,13 +88,16 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=127384497341164";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+	<script>
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=127384497341164";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<!-- screen loader start -->
 	<div class="screen-loader"></div>
 	<!-- screen loader end -->
@@ -339,14 +342,6 @@
 			<!-- /End Service Section -->
 
 			<!-- ==== Goole Maps ==== -->
-			<!-- <div class="content-div" id="map-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 text-center">
-						</div>
-					</div>
-				</div>
-			</div> -->
 			<div id="map"></div>
 			<!-- /end Google Maps -->
 			<!-- <div class="container">
@@ -440,21 +435,7 @@
 	<script src="js/plugins.js"></script>
 	<!-- Custom JS -->
 	<script src="js/main.js"></script>
-	<script>
-		function initMap() {
-			var matrusriNagar = {lat: 17.492887, lng: 78.366905};
-			var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 15,
-			center: matrusriNagar
-			});
-			var marker = new google.maps.Marker({
-			position: matrusriNagar,
-			map: map
-			});
-		}
-	</script>
-	<script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLgkhKcD2rz5VVvVSyQluZd8GeYPVGOpY&callback=initMap">
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLgkhKcD2rz5VVvVSyQluZd8GeYPVGOpY&callback=initMap">
 	</script>
 </body>
 
