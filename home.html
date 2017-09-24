@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var matrusriNagar = {lat: 17.492887, lng: 78.366905};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: matrusriNagar
+        });
+        var marker = new google.maps.Marker({
+          position: matrusriNagar,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLgkhKcD2rz5VVvVSyQluZd8GeYPVGOpY&callback=initMap">
+    </script>
+  </body>
+</html>
