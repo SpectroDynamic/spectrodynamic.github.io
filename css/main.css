@@ -719,7 +719,7 @@ a:hover {  text-decoration: underline }
    ==================================================
    ================================================== */
 @media only screen and (max-width: 767px) { 
-    /* .text-justify {  text-align: center } */
+    .text-justify {  text-align: center }
 }
 @media only screen and (max-width: 480px) { 
     /* body{background:#69C238}   */
